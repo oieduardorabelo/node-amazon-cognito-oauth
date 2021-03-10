@@ -52,7 +52,7 @@ Configuration used when creating the app client:
 - **IMPORTANT** Generate client secret - Uncheck/Turn off this checkbox
 - Auth Flows Configuration - I kept default values (values selected are: `ALLOW_CUSTOM_AUTH`, `ALLOW_USER_SRP_AUTH`, `ALLOW_REFRESH_TOKEN_AUTH`)
 - Security configuration
-  -> Prevent User Existence Errors - I kept default values (checkbox for "Enabled (Recommended)" checked/turned on)
+  - > Prevent User Existence Errors - I kept default values (checkbox for "Enabled (Recommended)" checked/turned on)
 - Click "Create app client"
 
 After the app client is created copy the unique **App client id** into `.env` on `COGNITO_CLIENT_ID=` variable.
@@ -76,11 +76,11 @@ Now we need to define OAuth flows and scopes for the App Client we created befor
 - ID - REDACTED (Unique to you)
 - Enabled Identity Providers - Check/turn on "Select all" checkbox
 - Sign in and sign out URLs
-  -> Callback URL(s) - http://localhost:4200/oauth/cognito
-  -> Sign out URL(s) - http://localhost:4200/oauth/cognito/logout
+  - > Callback URL(s) - http://localhost:4200/oauth/cognito
+  - > Sign out URL(s) - http://localhost:4200/oauth/cognito/logout
 - OAuth 2.0
-  -> Allowed OAuth Flows - Check/turn on "Authorization code grant" and "Implicit grant" checkboxes
-  -> Allowed OAuth Scopes - Check/turn on "email" and "openid" checkboxes
+  - > Allowed OAuth Flows - Check/turn on "Authorization code grant" and "Implicit grant" checkboxes
+  - > Allowed OAuth Scopes - Check/turn on "email" and "openid" checkboxes
 
 ![](./images/03.jpeg)
 
