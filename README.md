@@ -92,4 +92,4 @@ You are ready to run this example, make sure to:
 2. Run `npm install`
 3. Start the example with `npm start`
 
-If you have any questions you can reach out via [on my Twitter/oieduardorabelo](https://twitter.com/oieduardorabelo).
+If you have any questions you can reach out via [twitter/oieduardorabelo](https://twitter.com/oieduardorabelo).
