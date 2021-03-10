@@ -4,6 +4,7 @@ let qs = require("qs");
 let {
   COGNITO_CLIENT_ID,
   COGNITO_DOMAIN_NAME_URL,
+  COGNITO_LOGIN_GRANT_TYPE,
   COGNITO_LOGIN_REDIRECT_URL,
   COGNITO_LOGIN_RESPONSE_TYPE,
   COGNITO_LOGIN_SCOPE,
@@ -35,7 +36,7 @@ let postToken = async ({ code }) => {
   console.log("code", code);
   let url = `${COGNITO_DOMAIN_NAME_URL}/oauth2/token`;
   let params = {
-    grant_type: "authorization_code",
+    grant_type: COGNITO_LOGIN_GRANT_TYPE,
     client_id: COGNITO_CLIENT_ID,
     redirect_uri: COGNITO_LOGIN_REDIRECT_URL,
     code,
