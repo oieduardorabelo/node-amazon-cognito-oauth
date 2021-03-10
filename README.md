@@ -11,7 +11,7 @@ We take advantage of Amazon Cognito OAuth Domain Name to exchange tokens and acc
 The example above assumes a few things:
 
 - There's NO MFA CONFIGURED in the Cognito User Pool
-- There's NO ATTRIBUTE VERIFICATION by the Cognito User Pool (e.g. email, phone number etc)
+- There's EMAIL VERIFICATION by the Cognito User Pool (e.g. you need a valid email in the sign up process)
 - Password policy is "Minimum length: 6" only (e.g. numbers, special character verification are turned off)
 
 ## General settings
