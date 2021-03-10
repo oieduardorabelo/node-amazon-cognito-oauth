@@ -1,14 +1,8 @@
 {
-  "name": "nodejs-cognito-oauth",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./index.js"
   },
-  "keywords": [],
-  "author": "Eduardo Rabelo <oieduardorabelo@gmail.com> (https://github.com/oieduardorabelo)",
-  "license": "MIT",
   "dependencies": {
     "axios": "0.21.1",
     "cookie-session": "1.4.0",
