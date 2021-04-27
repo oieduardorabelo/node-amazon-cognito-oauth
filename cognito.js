@@ -60,12 +60,22 @@ let postToken = async ({ code }) => {
 };
 
 let getLogin = async () => {
-  let url = `${COGNITO_DOMAIN_NAME_URL}/login?client_id=${COGNITO_CLIENT_ID}&response_type=${COGNITO_LOGIN_RESPONSE_TYPE}&scope=${COGNITO_LOGIN_SCOPE}&redirect_uri=${COGNITO_LOGIN_REDIRECT_URL}`;
+  let params = {
+    client_id: COGNITO_CLIENT_ID,
+    response_type: COGNITO_LOGIN_RESPONSE_TYPE,
+    scope: COGNITO_LOGIN_SCOPE,
+    redirect_uri: COGNITO_LOGIN_REDIRECT_URL,
+  }
+  let url = `${COGNITO_DOMAIN_NAME_URL}/login?${qs.stringify(params, { encode: false })}`;
   return url;
 };
 
 let getLogout = async () => {
-  let url = `${COGNITO_DOMAIN_NAME_URL}/logout?client_id=${COGNITO_CLIENT_ID}&logout_uri=${COGNITO_LOGOUT_REDIRECT_URL}`;
+  let params = {
+    client_id: COGNITO_CLIENT_ID,
+    logout_uri: COGNITO_LOGOUT_REDIRECT_URL,
+  }
+  let url = `${COGNITO_DOMAIN_NAME_URL}/logout?${qs.stringify(params, { encode: false })}`;
   return url;
 };
 
